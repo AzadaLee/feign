@@ -18,3 +18,6 @@
 ## 当前调用节点如果发生ConnectionTimeout或ReadTimeout，会切换节点进行尝试，并对新节点进行ribbon.MaxAutoRetries设定次数的调用；切换节点的次数可以设定
 
 ## 如果把ribbon.MaxAutoRetries和ribbon.MaxAutoRetriesNextServer设置为0，则代表never retry
+
+# 7、feign.hystrix.enabled = true
+## 打开feign的熔断机制，可自定义异常
