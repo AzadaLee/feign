@@ -21,3 +21,5 @@
 
 # 7、feign.hystrix.enabled = true
 ## 打开feign的熔断机制，可自定义异常
+
+## 说明：如果在fallback中继续抛出异常，在调用处需要进行捕获，否则controllerAdvice出捕获的异常为hystrix抛出的异常；如果在fallback中进行正常的返回，则在调用处无需做特殊处理

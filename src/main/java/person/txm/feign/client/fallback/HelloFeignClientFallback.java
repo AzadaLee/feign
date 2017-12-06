@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 import person.txm.feign.client.HelloFeignClient;
+import person.txm.feign.controller.TarsDataSourceException;
 
 @Component
 public class HelloFeignClientFallback implements HelloFeignClient {
@@ -16,6 +17,7 @@ public class HelloFeignClientFallback implements HelloFeignClient {
 		result.put("resultCode", "500000");
 		result.put("resultMsg", "调用异常");
 		return result;
+//		throw new TarsDataSourceException("01100", "sadas");
 	}
 
 	@Override
